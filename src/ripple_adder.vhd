@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------
--- Implements a 4-bit Ripple-Carry adder from instantiated Full Adders
+-- ripple_adder.vhd Implements a 4-bit Ripple-Carry adder from instantiated Full Adders
 ----------------------------------------------------------------------------------
 
 library IEEE;
@@ -17,11 +17,11 @@ architecture Behavioral of ripple_adder is
 
     component full_adder is
         port (
-            i_A     : in std_logic;
-            i_B     : in std_logic;
-            i_Cin   : in std_logic;
-            o_S     : out std_logic;
-            o_Cout  : out std_logic
+            A     : in std_logic;
+            B     : in std_logic;
+            Cin   : in std_logic;
+            S     : out std_logic;
+            Cout  : out std_logic
             );
         end component full_adder;
     -- Declare components here
@@ -62,9 +62,9 @@ begin
     port map(
         A     => A(3),
         B     => B(3),
-        Cin   => w_carry(0),
+        Cin   => w_carry(2),
         S     => S(3),
-        Cout  => o_Cout
+        Cout  => Cout
     );
 
 end Behavioral;
