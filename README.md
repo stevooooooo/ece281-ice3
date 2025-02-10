@@ -26,7 +26,7 @@ Assert statements of other severity levels will be reported, but not fail the wo
 
 ![Ripple Adder WaveForm showing multiple test inputs and their outputs](Ripple_Wave.png)
 
-![Basys3 Sketch](Sketch.png.png)
+![Basys3 Sketch](Sketch.png)
 
 ## Documentation
 
